@@ -1,0 +1,2 @@
+export type TransformFn<T, P, K extends keyof T, D extends keyof P> = (parameters: { value: T[K], source: T }) => P[D];
+export type TransformFnAsync<T, P, K extends keyof T, D extends keyof P> = (parameters: { value: T[K], source: T }) => Promise<P[D]>;
